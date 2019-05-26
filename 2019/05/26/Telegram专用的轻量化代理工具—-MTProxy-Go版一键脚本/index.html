@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content>
+    <meta name="author" content="m0mkris">
+    <meta name="keywords" content>
+    <title>Telegram专用的轻量化代理工具— MTProxy Go版一键脚本 ~ 拒绝一切审查</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/mdb.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_vr10bjtg3us.css">
+    
+        <link rel="stylesheet" href="/css/Prettify/tomorrow-night-eighties.min.css">
+    
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>拒绝一切审查</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">Archives</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2" style='background: url("https://i.imgur.com/oADD1Ip.jpg")no-repeat center center;background-size: cover;'>
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+            <p class="h2">Telegram专用的轻量化代理工具— MTProxy Go版一键脚本</p>
+            <br>
+            
+            <p>Sunday, May 26th 2019, 11:08 am</p>
+            
+        </div>
+        </div>
+    </div>
+    </div>
+  </header>
+
+  <main>
+  
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 ">
+            <div class="post-content py-5 z-depth-3 main">
+                <p>逗比被抓了，网站也关了，这个是从google快照看到的</p>
+<p>因为之前搭建MTproxy很快就被墙，所以试下这个看下</p>
+<h2 id="为什么要用-MTProxy-？为何不直接用代理软件？"><a href="#为什么要用-MTProxy-？为何不直接用代理软件？" class="headerlink" title="为什么要用 MTProxy ？为何不直接用代理软件？"></a>为什么要用 MTProxy ？为何不直接用代理软件？</h2><p>可能有人会疑问：MTProxy 是一个只能 Telegram 客户端使用的代理，那么为什么不直接用其他代理软件呢？</p>
+<p>我就特地来回答一下大家的疑问。</p>
+<ol>
+<li><p>移动设备便捷性：对于电脑用户来说， MTProxy 相对鸡肋，因为很多人都是代理软件开机启动并且全天不关。但是对于手机用户来说，每次要查看 Telegram 客户端，都需要先开启代理软件，而如果你在手机上不是经常要挂代理，但是你会经常去 Telegram 里吹比打屁，那么你就很适合使用 MTProxy 了，它可以让你使用 Telegram 客户端像使用国内的 QQ、微信一样方便，打开即用。</p>
+</li>
+<li><p>适合分享给朋友：当你觉得 TG很好用，想要劝身边的朋友抛弃 QQ、微信 转投 Telegram 时，你却发现你还需要给他配置一套代理软件、代理账号，指导他如何使用代理软件，巴拉巴拉的。但是如果你有 MTProxy 代理账号，那么只需要填写代理配置后，即可直接使用！</p>
+</li>
+</ol>
+<h2 id="该版本相比官方版有什么区别？"><a href="#该版本相比官方版有什么区别？" class="headerlink" title="该版本相比官方版有什么区别？"></a>该版本相比官方版有什么区别？</h2><p>支持 IPv6 。<br>支持 CentOS6。<br>资源占用更少，并发更强。<br>无需任何依赖，安装快速。<br>更少错误出现，不用担心编译出错。<br>NAT 服务器无需填写内网IP，只需脚本自动识别公网IP（支持自定义）。<br>支持强制安全模式（只有密匙头部包含 dd 的客户端才能链接，降低被墙几率）。</p>
+<h2 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h2><p>CentOS 6+ / Debian 7+ / Ubuntu 14.04 +</p>
+<h2 id="脚本版本"><a href="#脚本版本" class="headerlink" title="脚本版本"></a>脚本版本</h2><p>Ver: 1.0.1</p>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><p>执行下面的代码下载并运行脚本。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https:<span class="comment">//raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/mtproxy_go.sh &amp;&amp; chmod +x mtproxy_go.sh &amp;&amp; bash mtproxy_go.sh</span></span><br><span class="line">运行脚本后会出现脚本操作菜单，选择并输入 <span class="number">1</span> 就会开始安装。</span><br></pre></td></tr></table></figure>
+<h2 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h2><p>进入下载脚本的目录并运行脚本：</p>
+<p>./mtproxy_go.sh<br>然后选择你要执行的选项即可。</p>
+<p>  MTProxy-Go 一键管理脚本 [vX.X.X]<br>  —- Toyo | doub.io/shell-jc9 —-</p>
+<ol start="0">
+<li>升级脚本<br>————————————</li>
+<li>安装 MTProxy</li>
+<li>更新 MTProxy</li>
+<li>卸载 MTProxy<br>————————————</li>
+<li>启动 MTProxy</li>
+<li>停止 MTProxy</li>
+<li>重启 MTProxy<br>————————————</li>
+<li>设置 账号配置</li>
+<li>查看 账号信息</li>
+<li><p>查看 日志信息</p>
+<ol start="10">
+<li>查看 链接信息<br>————————————</li>
+</ol>
+<p>当前状态: 已安装 并 已启动</p>
+<p>请输入数字 [0-10]:</p>
+</li>
+</ol>
+<h2 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h2><p>启动：/etc/init.d/mtproxy-go start</p>
+<p>停止：/etc/init.d/mtproxy-go stop</p>
+<p>重启：/etc/init.d/mtproxy-go restart</p>
+<p>查看状态：/etc/init.d/mtproxy-go status</p>
+<p>安装目录：/usr/local/mtproxy-go</p>
+<p>配置文件：/usr/local/mtproxy-go/mtproxy.conf</p>
+<p>日志文件：/usr/local/mtproxy-go/mtproxy.log</p>
+
+                <hr>
+                <div>
+                    <p>
+                         
+                        <span class="badge badge-light">#&nbsp;信息安全</span>
+                        &nbsp;
+                        
+                    </p>
+                </div>
+                <br>
+                
+                    <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>        
+</div>
+
+<br><br><br>
+
+<!-- Comments -->
+<div class="comments" id="comments">
+ 
+</div>
+  
+  </main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank"><b>HEXO</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank"> <b>Material-T</b></a>
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/mdb.min.js"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    
+    <script src="/js/post.js"></script>
+    
+      <script src="/js/plugins/prettify.js"></script>
+      <script>
+          $(document).ready(function(){
+              $('pre').addClass('prettyprint linenums');
+              prettyPrint();
+          })
+      </script>
+    
+  
+</body>
+</html>
