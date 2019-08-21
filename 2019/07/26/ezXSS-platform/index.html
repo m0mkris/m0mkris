@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content>
+    <meta name="author" content="m0mkris">
+    <meta name="keywords" content>
+    <title>ezXSS platform ~ 拒绝一切审查</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/mdb.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_vr10bjtg3us.css">
+    
+        <link rel="stylesheet" href="/css/Prettify/tomorrow-night-eighties.min.css">
+    
+</head>
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+<div class="container">
+    <a class="navbar-brand" href="/"><strong>拒绝一切审查</strong></a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-center">
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/archives/">Archives</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about/">About</a>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+</nav>
+    <div class="view intro-2" style='background: url("https://i.imgur.com/oADD1Ip.jpg")no-repeat center center;background-size: cover;'>
+    <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+        <div class="container text-center white-text wow fadeInUp">
+            <p class="h2">ezXSS platform</p>
+            <br>
+            
+            <p>Friday, July 26th 2019, 6:39 am</p>
+            
+        </div>
+        </div>
+    </div>
+    </div>
+  </header>
+
+  <main>
+  
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 offset-md-2 ">
+            <div class="post-content py-5 z-depth-3 main">
+                <h3 id="ezXss"><a href="#ezXss" class="headerlink" title="ezXss"></a>ezXss</h3><p>y35u大佬推荐的一个老外写的xss平台，感觉看起来蛮简单的</p>
+<p>github：<a href="https://github.com/ssl/ezXSS" target="_blank" rel="noopener">https://github.com/ssl/ezXSS</a></p>
+<p><img src="https://camo.githubusercontent.com/864ef00c5f9e051bb6987dd2fb955543c9b86ff0/68747470733a2f2f692e696d6775722e636f6d2f3739775367674a2e706e67" alt></p>
+<p><img src="https://camo.githubusercontent.com/94e31fcb55ed1cd4af90cd7e2df2d2999babb6e8/68747470733a2f2f692e696d6775722e636f6d2f6f79624c48546e2e706e67" alt></p>
+<p><img src="https://camo.githubusercontent.com/7f87e70b06b6d9de611174497288fc918ec5f793/68747470733a2f2f692e696d6775722e636f6d2f41696275767a7a2e706e67" alt></p>
+<p><img src="https://camo.githubusercontent.com/36920ea2f77cf0c42883347ed5e8888f04a32b28/68747470733a2f2f692e696d6775722e636f6d2f7854314d6d4f312e706e67" alt></p>
+<p><img src="https://camo.githubusercontent.com/0062fb0255d77358c05da06ac763f3f00900c98b/68747470733a2f2f692e696d6775722e636f6d2f62457a736b4b6f2e706e67" alt></p>
+<h3 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h3><p>摘自y35u大佬</p>
+<pre><code class="html">要php7.0以上的版本
+**必须**开启https，但是不要强制走https
+也就是说http,https都要能访问到
+创建一个数据库
+数据库信息配置在src/Database.php文件中
+访问/manage/install 进行安装
+默认安装之后，setting下面的Filters要开启记录
+（也可以开启记录和邮件收信)
+默认是不记录任何数据的，
+</code></pre>
+<h4 id="apache伪静态-htacess"><a href="#apache伪静态-htacess" class="headerlink" title="apache伪静态.htacess"></a>apache伪静态.htacess</h4><p>只要把manage的访问指向index.php即可</p>
+<pre><code class="javascript">&lt;IfModule mod_rewrite.c&gt;
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+&lt;/IfModule&gt;
+</code></pre>
+<h4 id="nginx的伪静态规则"><a href="#nginx的伪静态规则" class="headerlink" title="nginx的伪静态规则"></a>nginx的伪静态规则</h4><pre><code class="php">#ignored: &quot;-&quot; thing used or unknown variable in regex/rew 
+if (!-f $request_filename){
+    set $rule_1 1$rule_1;
+}
+if (!-d $request_filename){
+    set $rule_1 2$rule_1;
+}
+if ($rule_1 = &quot;21&quot;){
+    rewrite /. /index.php last;
+}
+</code></pre>
+<h4 id="安全建议"><a href="#安全建议" class="headerlink" title="安全建议"></a>安全建议</h4><p>把代码里有远程加载的文件都本地话，以免作者放后门！</p>
+
+                <hr>
+                <div>
+                    <p>
+                         
+                        <span class="badge badge-light">#&nbsp;渗透测试</span>
+                        &nbsp;
+                        
+                    </p>
+                </div>
+                <br>
+                
+                    <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                
+            </div>
+        </div>
+        <div class="d-none d-md-block col-md-2">
+            
+  <div id="toc" class="py-5">
+    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+    <div id="tocbot"></div>
+  </div>
+
+        </div>
+    </div>        
+</div>
+
+<br><br><br>
+
+<!-- Comments -->
+<div class="comments" id="comments">
+ 
+</div>
+  
+  </main>
+
+<footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank"><b>HEXO</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/0x2e/Material-T" target="_blank"> <b>Material-T</b></a>
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/mdb.min.js"></script>
+  <script src="/js/main.js"></script>
+  
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+    
+    <script src="/js/post.js"></script>
+    
+      <script src="/js/plugins/prettify.js"></script>
+      <script>
+          $(document).ready(function(){
+              $('pre').addClass('prettyprint linenums');
+              prettyPrint();
+          })
+      </script>
+    
+  
+</body>
+</html>
