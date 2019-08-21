@@ -5,36 +5,36 @@
 
 
 
-
-
-
-
-
 <head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="utf-8">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content>
     <meta name="author" content="m0mkris">
     <meta name="keywords" content>
     <title>系统敏感信息收集 ~ 拒绝一切审查</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/css/mdb.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1067060_vr10bjtg3us.css">
+    <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css?v=5.7.2">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/bootstrap.min.css?v=4.3.1">
+    <link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css?v=4.8.7">
+    <link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css">
+    <link rel="stylesheet" href="/lib/nprogress/nprogress.css?v=0.2.0">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
     
-        <link rel="stylesheet" href="/css/Prettify/tomorrow-night-eighties.min.css">
+        <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css">
+    
+    <link rel="stylesheet" href="/css/main.css">
+
     
 </head>
 
+
 <body>
-  <header style="height: 70vh;">
+<header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
 <div class="container">
-    <a class="navbar-brand" href="/"><strong>拒绝一切审查</strong></a>
+    <a class="navbar-brand" href="/">&nbsp;<strong>拒绝一切审查</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <div class="animated-icon"><span></span><span></span><span></span></div>
@@ -53,6 +53,14 @@
             </li>
             
             <li class="nav-item">
+                <a class="nav-link" href="/categories/">Categories</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/tags/">Tags</a>
+            </li>
+            
+            <li class="nav-item">
                 <a class="nav-link" href="/about/">About</a>
             </li>
             
@@ -62,28 +70,36 @@
 
 
 </nav>
-    <div class="view intro-2" style='background: url("https://i.imgur.com/oADD1Ip.jpg")no-repeat center center;background-size: cover;'>
-    <div class="full-bg-img">
-        <div class="mask rgba-black-light flex-center">
-        <div class="container text-center white-text wow fadeInUp">
-            <p class="h2">系统敏感信息收集</p>
-            <br>
-            
-            <p>Saturday, May 25th 2019, 6:00 am</p>
-            
-        </div>
+    <div class="view intro-2"
+         style="background: url('/img/post.jpg')no-repeat center center;background-size: cover;">
+        <div class="full-bg-img">
+            <div class="mask rgba-black-light flex-center">
+                <div class="container text-center white-text wow fadeInUp">
+                    <span class="h2" id="subtitle">
+                        
+                    </span>
+                    
+                        <br>
+                        <p>Saturday, May 25th 2019, 6:00 am</p>
+                    
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-  </header>
+</header>
 
-  <main>
-  
-  <div class="container-fluid">
+<main>
+    
+        
+
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-8 offset-md-2 ">
-            <div class="post-content py-5 z-depth-3 main">
-                <h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><p>C:\boot.ini //查看系统版本<br>C:\Windows\System32\inetsrv\MetaBase.xml //IIS配置文件<br>C:\Windows\repair\sam //存储系统初次安装的密码<br>C:\Program Files\mysql\my.ini //Mysql配置<br>C:\Program Files\mysql\data\mysql\user.MYD //Mysql root<br>C:\Windows\php.ini //php配置信息<br>C:\Windows\my.ini //Mysql配置信息</p>
+        <div class="d-none d-lg-block col-lg-2"></div>
+            <div class="col-lg-8 nopadding-md">
+                <div class="py-5 z-depth-3 board">
+                    <div class="post-content mx-auto">
+                        <div class="markdown-body">
+                            <h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><p>C:\boot.ini //查看系统版本<br>C:\Windows\System32\inetsrv\MetaBase.xml //IIS配置文件<br>C:\Windows\repair\sam //存储系统初次安装的密码<br>C:\Program Files\mysql\my.ini //Mysql配置<br>C:\Program Files\mysql\data\mysql\user.MYD //Mysql root<br>C:\Windows\php.ini //php配置信息<br>C:\Windows\my.ini //Mysql配置信息</p>
 <h3 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h3><h4 id="常用信息收集"><a href="#常用信息收集" class="headerlink" title="常用信息收集"></a>常用信息收集</h4><p>/etc/hosts<br>/etc/hosts.allow<br>/etc/passwd # 用户情况<br>/etc/shadow # 直接 John the Ripper/root/.bash_history<br>/root/.mysql_history #会有mysql root密码<br>/root/.wget-hsts<br>/var/www/html/index.html<br>/etc/my.cnf</p>
 <h4 id="内核和版本信息"><a href="#内核和版本信息" class="headerlink" title="内核和版本信息"></a>内核和版本信息</h4><p>lsb_release -d<br>cat /etc/issue<br>cat /etc/os-release<br>cat /etc/redhat-release<br>cat /etc/debian_version<br>cat /etc/slackware_version<br>ls /etc/*version<br>cat /proc/version<br>cat /proc/cpuinfo</p>
 <h4 id="需要权限读取的信息"><a href="#需要权限读取的信息" class="headerlink" title="需要权限读取的信息"></a>需要权限读取的信息</h4><p>/.bash_history # 历史中可能带着用户的密码 (遇到过现实案例,是输错的情况下参数的,比如没输入 su 却以为自己输了 su)<br>/usr/local/tomcat/conf/tomcat-users.xml # tomcat 用户配置文件<br>/etc/hosts # 主机信息，通常配置了一些内网域名<br>/etc/hosts.allow<br>/root/.bashrc # 环境变量<br>/root/.bash_history # 还有root外的其他用户<br>/root/.viminfo # vim 信息<br>/root/.ssh/authorized_keys #存储客户端的ssh public key 可免密码登陆<br>/root/.ssh/id_rsa # 拿私钥直接ssh<br>/proc/xxxx/cmdline # 进程状态枚举 xxxx 可以为0000-9999 使用burpsuite<br>数据库 config 文件<br>web 日志 access.log, error.log<br>ssh 日志<br>/var/lib/php/sess_PHPSESSID # 非常规问题 session 文件</p>
@@ -93,69 +109,105 @@
 <h4 id="system-proc"><a href="#system-proc" class="headerlink" title="system proc"></a>system proc</h4><p>/proc/sched_debug<br>/proc/mounts<br>/proc/net/arp<br>/proc/net/route<br>/proc/net/tcp<br>/proc/net/udp<br>/proc/net/fib_trie<br>/proc/version<br>/proc/self/cmdline<br>/proc/self/stat<br>/proc/self/status<br>/proc/self/environ<br>/proc/verison<br>/proc/cmdline<br>/proc/self/cwd<br>/proc/self/fd/[1-30]</p>
 <p>有待添加….</p>
 
-                <hr>
-                <div>
-                    <p>
-                         
-                        <span class="badge badge-light">#&nbsp;渗透测试</span>
-                        &nbsp;
-                        
-                    </p>
+                            <hr>
+                        </div>
+                        <br>
+                        <div>
+                            
+                            <p>
+                                <i class="iconfont icon-tag"></i>
+                                
+                                    <a class="hover-with-bg" href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95">渗透测试</a>
+                                
+                            </p>
+                            
+                                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="nofollow noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                            
+                        </div>
+                    </div>
                 </div>
-                <br>
-                
-                    <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
-                
             </div>
-        </div>
-        <div class="d-none d-md-block col-md-2">
+        <div class="d-none d-lg-block col-lg-2 toc-container">
             
-  <div id="toc" class="py-5">
-    <p class="h6"><i class="iconfont icon-toc" style="vertical-align:middle"></i> Toc:</p> 
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i> Toc:</p> 
     <div id="tocbot"></div>
   </div>
 
         </div>
-    </div>        
+    </div>
 </div>
 
-<br><br><br>
+<!-- custom -->
+
 
 <!-- Comments -->
-<div class="comments" id="comments">
- 
+<div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container comments mx-auto" id="comments">
+        
+    </div>
 </div>
-  
-  </main>
+    
+</main>
 
 <footer class="mt-5">
   <div class="text-center py-3">
-    <a href="https://hexo.io" target="_blank"><b>HEXO</b></a>
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
     <i class="iconfont icon-love"></i>
-    <a href="https://github.com/0x2e/Material-T" target="_blank"> <b>Material-T</b></a>
+    <a href="https://github.com/0x2e/Material-T" target="_blank" rel="nofollow noopener"> <b>Material-T</b></a>
+    <br>
+    
   </div>
 </footer>
 
   <!-- SCRIPTS -->
-  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/jquery-3.3.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.7.4/js/mdb.min.js"></script>
+  <script src="/lib/mdbootstrap/js/jquery-3.4.1.min.js"></script>
+  <script src="/lib/mdbootstrap/js/popper.min.js"></script>
+  <script src="/lib/mdbootstrap/js/bootstrap.min.js?v=4.3.1"></script>
+  <script src="/lib/mdbootstrap/js/mdb.min.js?v=4.8.7"></script>
+  <script src="/lib/nprogress/nprogress.min.js?v=0.2.0"></script>
   <script src="/js/main.js"></script>
   
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script>
+      <script src="/lib/tocbot/tocbot.min.js?v=4.7.0"></script>
     
     <script src="/js/post.js"></script>
-    
-      <script src="/js/plugins/prettify.js"></script>
-      <script>
-          $(document).ready(function(){
-              $('pre').addClass('prettyprint linenums');
-              prettyPrint();
-          })
-      </script>
-    
+  
+  
+    <script src="/lib/prettify/prettify.min.js?v=0.1.0"></script>
+    <script>
+      $(document).ready(function(){
+        $('pre').addClass('prettyprint linenums');
+        prettyPrint();
+      })
+    </script>
+  
+  
+    <script src="/lib/typed/typed.min.js?v=2.0.9"></script>
+    <script>
+        var typed = new Typed('#subtitle', {
+          strings: [
+            '  ',
+            "系统敏感信息收集&nbsp;",
+        ],
+        cursorChar: "_",
+        typeSpeed: 70,
+        startDelay: 300, //开始之前延迟300毫秒
+        loop: false,
+        });
+        $(".typed-cursor").addClass("h2");
+    </script>
+  
+  
+    <script src="/lib/anchor/anchor.min.js?v=4.2.0"></script>
+    <script>
+      anchors.options = {
+        placement: "right",
+        visible: "false",
+        
+      };
+      anchors.add(".post-content > h1,h2,h3,h4,h5,h6");
+    </script>
   
 </body>
 </html>
