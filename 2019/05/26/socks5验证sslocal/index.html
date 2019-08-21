@@ -85,11 +85,18 @@
             <div class="post-content py-5 z-depth-3 main">
                 <p>在V2ex上看到的</p>
 <p>第一种：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">可以在国内机器上部署一个支持 socks5 用户验证的 sslocal</span><br><span class="line"></span><br><span class="line">https:<span class="comment">//github.com/ihciah/shadowsocks-with-socks-auth</span></span><br></pre></td></tr></table></figure>
+<pre><code class="php">可以在国内机器上部署一个支持 socks5 用户验证的 sslocal
+
+https://github.com/ihciah/shadowsocks-with-socks-auth
+</code></pre>
 <p>第二种：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">用 gost 在国内机器上搭一个 auth 代理可破</span><br><span class="line"></span><br><span class="line">./gost -L=socks5:<span class="comment">//username:password@:port -F=ss://chacha20:password@IP:port</span></span><br></pre></td></tr></table></figure>
+<pre><code class="php">用 gost 在国内机器上搭一个 auth 代理可破
+
+./gost -L=socks5://username:password@:port -F=ss://chacha20:password@IP:port
+</code></pre>
 <p>第三种：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//github.com/ihciah/inner-shadowsocks</span></span><br></pre></td></tr></table></figure>
+<pre><code class="php">https://github.com/ihciah/inner-shadowsocks
+</code></pre>
 
                 <hr>
                 <div>
